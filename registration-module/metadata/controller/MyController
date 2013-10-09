@@ -1,0 +1,74 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "7949a575-14b3-4d1f-9991-2b846f87e7df",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSignUpsignInCardPanelSignUpSuccess",
+                "designer|params": [
+                    "panel"
+                ],
+                "implHandler": [
+                    "alert('signUpSuccess fired. This event should be honored in main application');"
+                ],
+                "name": "signUpSuccess",
+                "designer|targetType": "SignUpsignInCardPanel",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "b3b8e13f-7238-4a39-b96b-7ef98c692a3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSignUpsignInCardPanelSignInSuccess",
+                "designer|params": [
+                    "panel"
+                ],
+                "implHandler": [
+                    "alert('sign In Success fired. This event should be honored in main application');",
+                    "",
+                    "var signUpsignInCardPanel = this.getsignUpsignInCardPanel();",
+                    "alert(signUpsignInCardPanel);",
+                    "var dummyUserAppPanel = signUpsignInCardPanel.down('#dummyUserAppPanel');",
+                    "signUpsignInCardPanel.setActiveItem(dummyUserAppPanel);"
+                ],
+                "name": "signInSuccess",
+                "designer|targetType": "SignUpsignInCardPanel",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "f4a0aab7-4130-476d-9956-05854946b96f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "signUpsignInCardPanel",
+                "selector": "signUpsignInCardPanel"
+            },
+            "designerId": "62abbf6d-ac68-4831-97d3-9f8d1f5f45ff"
+        }
+    ]
+}

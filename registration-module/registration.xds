@@ -1,0 +1,64 @@
+{
+    "name": "registration",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "",
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "b1eb75fc-1f7c-4b0c-8765-75107c58b008": {
+            "paths": [
+                "metadata/view/SignUpsignInCardPanel",
+                "app/view/override/SignUpsignInCardPanel.js",
+                "app/view/SignUpsignInCardPanel.js"
+            ],
+            "className": "SignUpsignInCardPanel"
+        },
+        "7949a575-14b3-4d1f-9991-2b846f87e7df": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
+        },
+        "a598bd29-910a-4a96-8b5e-9663202da0e7": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "af1de5c9-eb00-4e9e-963e-dab033b6f9d3": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "b1eb75fc-1f7c-4b0c-8765-75107c58b008"
+        ],
+        "store": [],
+        "controller": [
+            "7949a575-14b3-4d1f-9991-2b846f87e7df"
+        ],
+        "model": [],
+        "resource": [
+            "a598bd29-910a-4a96-8b5e-9663202da0e7",
+            "af1de5c9-eb00-4e9e-963e-dab033b6f9d3"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
