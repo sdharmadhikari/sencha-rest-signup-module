@@ -6,9 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "registrationUrl": "http://localhost:8080/tusers",
+        "registrationUrl": "http://localhost:8080/appusers",
         "base64JsLocation": "static/js/Base64.js",
-        "activeItem": 1,
         "itemId": "signUpsignInCardPanel",
         "designer|userClassName": "SignUpsignInCardPanel",
         "designer|userAlias": "registrationCardPanel",
@@ -50,215 +49,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "listeners": [
-                    "[",
-                    "    {",
-                    "        ",
-                    "            delegate: '#loginButtonItemId',",
-                    "    \t\tevent: 'tap',",
-                    "    \t\tfn: 'onLogInButtonTap'",
-                    "",
-                    "    }",
-                    "",
-                    "",
-                    "]   ",
-                    "    "
-                ],
-                "loginUrl": "http://localhost:8080/tusers?find=ByUseridEqualsAndPasswordEquals",
-                "itemId": "loginForm"
-            },
-            "configAlternates": {
-                "listeners": "array"
-            },
-            "designerId": "65519564-949c-4c82-b96d-985f36ada2f6",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "listeners",
-                    "type": "string"
-                },
-                {
-                    "group": "(Custom Properties)",
-                    "name": "loginUrl",
-                    "type": "string"
-                }
-            ],
-            "cn": [
-                {
-                    "type": "Ext.TitleBar",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": "top",
-                        "title": "App Name"
-                    },
-                    "designerId": "2d7cde46-4ddc-4da0-9fe8-fb36c8e76c46"
-                },
-                {
-                    "type": "Ext.Img",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 101
-                    },
-                    "designerId": "ea613a8d-eb86-415d-a42d-92ad399e2c19"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "hidden": true,
-                        "hideAnimation": "fadeOut",
-                        "html": "Login failed, try again..",
-                        "itemId": "signInFailedLabel",
-                        "showAnimation": "fadeIn",
-                        "style": "color:#990000;"
-                    },
-                    "designerId": "d2ea19b7-165e-4f63-af25-b68c8a47c163"
-                },
-                {
-                    "type": "Ext.form.FieldSet",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "title": null
-                    },
-                    "designerId": "31e977b7-2bfe-4627-a4a4-3fa728c7746c",
-                    "cn": [
-                        {
-                            "type": "Ext.field.Text",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "itemId": "signInUserid",
-                                "label": null,
-                                "name": "userid",
-                                "required": true,
-                                "placeHolder": "Userid.."
-                            },
-                            "designerId": "e8228b25-7684-4a06-a2d6-7b711ebbf252"
-                        },
-                        {
-                            "type": "Ext.field.Password",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "itemId": "signInPassword",
-                                "label": null,
-                                "name": "userid",
-                                "required": true,
-                                "placeHolder": "Password.."
-                            },
-                            "designerId": "137072b7-0480-453a-92ed-1c885ca9dfd0"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.form.FieldSet",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "title": null
-                    },
-                    "designerId": "62505478-8401-4e8c-9c7d-09c12f22b0d7",
-                    "cn": [
-                        {
-                            "type": "Ext.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "itemId": "loginButtonItemId",
-                                "ui": "action",
-                                "text": "Log In"
-                            },
-                            "designerId": "d40e1af4-0fc5-47b2-a1f1-5ae4e183938b"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.form.FieldSet",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "title": null
-                    },
-                    "designerId": "4dd92eac-8c3e-4aed-8d94-746d1c180936",
-                    "cn": [
-                        {
-                            "type": "Ext.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "ui": "confirm",
-                                "text": "Snap Sign Up !"
-                            },
-                            "designerId": "6004deb3-58ab-45f6-a1af-a4be62d5b50f",
-                            "cn": [
-                                {
-                                    "type": "fixedfunction",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "handler",
-                                        "designer|params": [
-                                            "button",
-                                            "event"
-                                        ],
-                                        "implHandler": [
-                                            "var loginForm = this.up('#loginFormItemId');",
-                                            "loginForm.fireEvent('signUpRequested');"
-                                        ]
-                                    },
-                                    "designerId": "783e52c3-1119-434c-8b0c-66ddc4010ee6"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Ext.form.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "itemId": "whatsYourNameForm"
             },
             "designerId": "11048450-c0bd-4b46-9764-42d9e809afd0",
@@ -271,7 +61,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Whats Your Name, Buddy !"
+                        "title": "Whats Your Name ?"
                     },
                     "designerId": "07f7be06-32e7-400f-a86c-7d131732bec6",
                     "cn": [
@@ -299,7 +89,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Type any word you like .."
+                        "title": "Any word you can remember.."
                     },
                     "designerId": "ef49c0eb-c090-419a-9c49-ac4ba0b0df8d",
                     "cn": [
@@ -361,7 +151,7 @@
                                             "event"
                                         ],
                                         "implHandler": [
-                                            "var signUpsignInCardPanel = this.up('signUpsignInCardPanel');",
+                                            "var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');",
                                             "",
                                             "var whatsYourNameForm = signUpsignInCardPanel.down('#whatsYourNameForm');",
                                             "",
