@@ -39,7 +39,62 @@
                 "docked": "top",
                 "title": "App Name"
             },
-            "designerId": "7c05c8ef-b3a1-4524-9780-d4ea4bd9de37"
+            "designerId": "7c05c8ef-b3a1-4524-9780-d4ea4bd9de37",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "8aef261d-9415-4ef7-ae41-828607657faf",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "itemId": "userInfoFormBackButton",
+                                "ui": "back",
+                                "text": "Back"
+                            },
+                            "designerId": "ecdccad2-deca-4293-ac9d-dca31c4d0ead",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');",
+                                            "var quickSignUpDoneForm = signUpsignInCardPanel.down('#quickSignUpDoneForm');",
+                                            "var userInfoFormBackButton = signUpsignInCardPanel.down('#userInfoFormBackButton');",
+                                            "",
+                                            "",
+                                            "userInfoFormBackButton.hide();",
+                                            "signUpsignInCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});"
+                                        ]
+                                    },
+                                    "designerId": "3a2dbb5f-a80e-41b2-809c-3d0e379a70fe"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.form.Panel",
@@ -377,10 +432,10 @@
                                             "event"
                                         ],
                                         "implHandler": [
-                                            "var signUpsignInCardPanel = this.up('signUpsignInCardPanel');",
+                                            "var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');",
                                             "var quickSignUpDoneForm = signUpsignInCardPanel.down('#quickSignUpDoneForm');",
                                             "var userObject = quickSignUpDoneForm.createdUserObject;",
-                                            "signUpsignInCardPanel.fireEvent('signUpSuccess',userObject);"
+                                            "signUpsignInCardPanel.fireEvent('signInSuccess',userObject);"
                                         ]
                                     },
                                     "designerId": "920b1857-bf6b-42ad-a48f-fab0e0c5c77b"
@@ -442,22 +497,24 @@
                                             "event"
                                         ],
                                         "implHandler": [
-                                            "var signUpsignInCardPanel = this.up('signUpsignInCardPanel');",
-                                            "var registrationPage1 = signUpsignInCardPanel.down('#registrationPage1');",
+                                            "var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');",
+                                            "var userInfoForm = signUpsignInCardPanel.down('#userInfoForm');",
                                             "var quickSignUpDoneForm = this.up('#quickSignUpDoneForm');",
+                                            "var userInfoFormBackButton = signUpsignInCardPanel.down('#userInfoFormBackButton');",
+                                            "",
                                             "",
                                             "var userObject = quickSignUpDoneForm.createdUserObject;",
                                             "",
-                                            "var firstName = registrationPage1.down('#firstName');",
-                                            "var lastName = registrationPage1.down('#lastName');",
-                                            "var userEmail = registrationPage1.down('#userEmail');",
+                                            "var firstName = userInfoForm.down('#firstName');",
+                                            "var lastName = userInfoForm.down('#lastName');",
+                                            "var userEmail = userInfoForm.down('#userEmail');",
                                             "",
-                                            "var userid = registrationPage1.down('#userid');",
-                                            "var password = registrationPage1.down('#password');",
-                                            "var readablePassword = registrationPage1.down('#readablePassword');",
+                                            "var userid = userInfoForm.down('#userid');",
+                                            "var password = userInfoForm.down('#password');",
+                                            "var readablePassword = userInfoForm.down('#readablePassword');",
                                             "",
                                             "",
-                                            "registrationPage1.userObject = userObject; // Assigning userObject to ",
+                                            "userInfoForm.userObject = userObject; // Assigning userObject to ",
                                             "// registration page because will need things like current authValue",
                                             "// while updating the user",
                                             "",
@@ -469,7 +526,9 @@
                                             "password.setValue(userObject.plainPassword);",
                                             "readablePassword.setValue(userObject.plainPassword);",
                                             "",
-                                            "signUpsignInCardPanel.animateActiveItem(registrationPage1, { type : 'slide' });",
+                                            "userInfoFormBackButton.show();",
+                                            "",
+                                            "signUpsignInCardPanel.animateActiveItem(userInfoForm, { type : 'slide' });",
                                             "",
                                             ""
                                         ]
@@ -716,7 +775,7 @@
                                             "event"
                                         ],
                                         "implHandler": [
-                                            "var signUpsignInCardPanel = this.up('signUpsignInCardPanel');",
+                                            "var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');",
                                             "var userInfoForm = signUpsignInCardPanel.down('#userInfoForm');",
                                             "",
                                             "var firstName = userInfoForm.down('#firstName');",

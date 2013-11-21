@@ -20,10 +20,11 @@
             "userConfig": {
                 "fn": "onSignUpsignInCardPanelSignUpSuccess",
                 "designer|params": [
-                    "panel"
+                    "userObject"
                 ],
                 "implHandler": [
-                    "alert('signUpSuccess fired. This event should be honored in main application');"
+                    "console.log(JSON.stringify(userObject));",
+                    "Ext.Msg.alert('signUpSuccess fired. This event should be honored in main application');"
                 ],
                 "name": "signUpSuccess",
                 "designer|targetType": "SignUpsignInCardPanel",
@@ -41,15 +42,13 @@
             "userConfig": {
                 "fn": "onSignUpsignInCardPanelSignInSuccess",
                 "designer|params": [
-                    "panel"
+                    "userObject"
                 ],
                 "implHandler": [
-                    "alert('sign In Success fired. This event should be honored in main application');",
-                    "",
-                    "var signUpsignInCardPanel = this.getsignUpsignInCardPanel();",
-                    "alert(signUpsignInCardPanel);",
-                    "var dummyUserAppPanel = signUpsignInCardPanel.down('#dummyUserAppPanel');",
-                    "signUpsignInCardPanel.setActiveItem(dummyUserAppPanel);"
+                    "console.log(JSON.stringify(userObject));",
+                    "Ext.Msg.alert('signUpSuccess fired. This event should be honored in main application');",
+                    "var signUpsignInCardPanel = this.getSignUpsignInCardPanel();",
+                    ""
                 ],
                 "name": "signInSuccess",
                 "designer|targetType": "SignUpsignInCardPanel",
