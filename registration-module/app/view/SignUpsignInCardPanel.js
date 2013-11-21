@@ -28,7 +28,30 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'App Name'
+                title: 'App Name',
+                items: [
+                    {
+                        xtype: 'panel',
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');
+                                    var quickSignUpDoneForm = signUpsignInCardPanel.down('#quickSignUpDoneForm');
+                                    var userInfoFormBackButton = signUpsignInCardPanel.down('#userInfoFormBackButton');
+
+
+                                    userInfoFormBackButton.hide();
+                                    signUpsignInCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
+                                },
+                                hidden: true,
+                                itemId: 'userInfoFormBackButton',
+                                ui: 'back',
+                                text: 'Back'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'formpanel',
@@ -208,10 +231,10 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
-                                    var signUpsignInCardPanel = this.up('signUpsignInCardPanel');
+                                    var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');
                                     var quickSignUpDoneForm = signUpsignInCardPanel.down('#quickSignUpDoneForm');
                                     var userObject = quickSignUpDoneForm.createdUserObject;
-                                    signUpsignInCardPanel.fireEvent('signUpSuccess',userObject);
+                                    signUpsignInCardPanel.fireEvent('signInSuccess',userObject);
                                 },
                                 ui: 'action',
                                 text: 'Start Using App !'
@@ -230,22 +253,24 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
-                                    var signUpsignInCardPanel = this.up('signUpsignInCardPanel');
-                                    var registrationPage1 = signUpsignInCardPanel.down('#registrationPage1');
+                                    var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');
+                                    var userInfoForm = signUpsignInCardPanel.down('#userInfoForm');
                                     var quickSignUpDoneForm = this.up('#quickSignUpDoneForm');
+                                    var userInfoFormBackButton = signUpsignInCardPanel.down('#userInfoFormBackButton');
+
 
                                     var userObject = quickSignUpDoneForm.createdUserObject;
 
-                                    var firstName = registrationPage1.down('#firstName');
-                                    var lastName = registrationPage1.down('#lastName');
-                                    var userEmail = registrationPage1.down('#userEmail');
+                                    var firstName = userInfoForm.down('#firstName');
+                                    var lastName = userInfoForm.down('#lastName');
+                                    var userEmail = userInfoForm.down('#userEmail');
 
-                                    var userid = registrationPage1.down('#userid');
-                                    var password = registrationPage1.down('#password');
-                                    var readablePassword = registrationPage1.down('#readablePassword');
+                                    var userid = userInfoForm.down('#userid');
+                                    var password = userInfoForm.down('#password');
+                                    var readablePassword = userInfoForm.down('#readablePassword');
 
 
-                                    registrationPage1.userObject = userObject; // Assigning userObject to 
+                                    userInfoForm.userObject = userObject; // Assigning userObject to 
                                     // registration page because will need things like current authValue
                                     // while updating the user
 
@@ -257,7 +282,9 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
                                     password.setValue(userObject.plainPassword);
                                     readablePassword.setValue(userObject.plainPassword);
 
-                                    signUpsignInCardPanel.animateActiveItem(registrationPage1, { type : 'slide' });
+                                    userInfoFormBackButton.show();
+
+                                    signUpsignInCardPanel.animateActiveItem(userInfoForm, { type : 'slide' });
 
 
                                 },
@@ -336,7 +363,7 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
-                                    var signUpsignInCardPanel = this.up('signUpsignInCardPanel');
+                                    var signUpsignInCardPanel = this.up('#signUpsignInCardPanel');
                                     var userInfoForm = signUpsignInCardPanel.down('#userInfoForm');
 
                                     var firstName = userInfoForm.down('#firstName');
