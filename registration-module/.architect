@@ -7,7 +7,6 @@
         "resource": true,
         "b1eb75fc-1f7c-4b0c-8765-75107c58b008": {
             "id": "b1eb75fc-1f7c-4b0c-8765-75107c58b008",
-            "expanded": false,
             "cn": [
                 {
                     "id": "7c05c8ef-b3a1-4524-9780-d4ea4bd9de37",
@@ -199,11 +198,11 @@
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "7949a575-14b3-4d1f-9991-2b846f87e7df",
-        "selectedInstance": "f4a0aab7-4130-476d-9956-05854946b96f"
+        "topInstance": "b1eb75fc-1f7c-4b0c-8765-75107c58b008",
+        "selectedInstance": "07d53a73-cbcf-4352-81e8-d99f78a16f5a"
     },
     "codeState": {
-        "topInstance": "7949a575-14b3-4d1f-9991-2b846f87e7df"
+        "topInstance": "b1eb75fc-1f7c-4b0c-8765-75107c58b008"
     },
     "editMode": "code"
 }

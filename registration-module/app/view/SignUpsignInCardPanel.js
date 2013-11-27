@@ -476,7 +476,7 @@ Ext.define('MyApp.view.SignUpsignInCardPanel', {
 
                                             var updatedUserObject = Ext.JSON.decode(response.responseText);
 
-                                            if (updatedUserObject.updatedON > userObject.updatedON) {
+                                            if (updatedUserObject.version > userObject.version) {
                                                 updatedUserObject.plainPassword = userObject.password;
                                                 var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
                                                 var hash = Base64.encode(tok);
