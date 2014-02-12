@@ -1,16 +1,16 @@
 sencha-rest-signup-module
 =========================
 
-Pluggable User Signup Module for Sencha Touch.
+Pluggable User Signup Module for Sencha Touch. The module uses RESTful service for server communication. This module is created to avoid repeatative work developers have to do add sign-up/sign-in functionality in all Sencha Touch applications. 
 
-Single-click Snap-Signup to avoid user "signup-fatigue". REST based server calls.
+For sample back-end for this project, please refer to my other project "sencha-backend-roo"
 
 All handlers are inside the component and not in controllers. This has been done to make sure component is pluggable easily in other Sencha Touch Projects.
 Application wide event is triggered so that it can be captured anywhere. 
 For example signUpSuccess event is fired application wide.
 
 Features:
-* Follows "Snap Sign Up"(T) method for signup. Here is bit about this approach.
+* Follows "Snap Sign Up"(T) method for signup. Here is little bit about this approach.
 The signup process allowes users to signup in one click using just user name and temporary password.
 Temporary password is kept purposely visible to make signup far easier.
 
