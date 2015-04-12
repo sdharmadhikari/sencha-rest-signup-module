@@ -1,4 +1,4 @@
-Sencha Touch Sign-Up Module based REST principle
+Sencha Touch Sign-Up Module based On REST principle
 
 This Sencha Touch based Sign-Up/Registration modules provides most of the code required to get user registered. 
 
